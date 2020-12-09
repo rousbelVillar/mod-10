@@ -7,16 +7,8 @@
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
     },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rousbelVillar/mod-10.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rousbelVillar/mod-10/issues"
-  },
-  "homepage": "https://github.com/rousbelVillar/mod-10#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1"
