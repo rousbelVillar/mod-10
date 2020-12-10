@@ -2,10 +2,6 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 
-app.use(cors());
-app.get('/practica-9/modulo10/ingreseCedula/:cedula', (req, res) => {
-  res.status(200).send(showAnswer(req.params.cedula))
-})
 
 let port = process.env.PORT;
 if (port == null || port == "") {
@@ -14,6 +10,13 @@ if (port == null || port == "") {
 app.listen(port ,()=>{
     console.log("listening to port:" + port)
 });
+
+app.use(cors());
+
+app.get('/practica-9/modulo10/ingreseCedula/:cedula', (req, res) => {
+    const cedulaRes = {cedula: req.params.cedula,mensaje:showAnswer(req.params.cedula)}
+  res.status(200).send(cedulaRes)
+})
 
 function getIsCedulaValid(cedula){
     const Adasd = 0;
